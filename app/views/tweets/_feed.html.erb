@@ -1,0 +1,30 @@
+
+
+<% @tweets.each do |tweet|%>
+<div class="jumbotron mt-5">
+  <div class="media">
+    <img class="mr-3 rounded" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+    <div class="media-body">
+      <h4 class="mt-0">
+        <%= tweet.user.name %>
+      </h4>
+      <p><small>@<%= tweet.user.username %></small></p>
+      <p><%= tweet.tweet %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6"></div>
+    <div class="col-md-6 text-right">
+      <%= link_to 'Edit', edit_tweet_path(tweet), class: "btn  btn-outline-secondary" %>
+      <%= 
+      link_to 'Delete', tweet, method: :delete, 
+      data: { confirm: 'Are you sure?' },
+      class: "btn  btn-outline-secondary"
+      %>
+    </div>
+</div>
+</div>
+
+
+<% end %>
+			

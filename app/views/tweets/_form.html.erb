@@ -1,0 +1,14 @@
+<%= simple_form_for @tweet   do |f| %>
+  <%= f.error_notification %>
+  <div class="form-group">
+    <%= f.input :tweet,
+    label: "Tweet about it!",
+    input_html: { class: "form-control", id: "exampleFormControlTextarea1", rows: "5"} %>
+  </div>
+  <div class="d-flex justify-content-center">
+  
+  </div>
+  <%= f.button :submit, {class: "btn btn-outline-primary"} %>
+
+<% end %>
+
